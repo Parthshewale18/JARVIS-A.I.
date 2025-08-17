@@ -7,7 +7,7 @@ import datetime
 import random
 import google.generativeai as genai
 from env import GEMINI_API_KEY
-#---------------------------------------------------------------------------------------
+#-------------------------text-to-speech----------------------------------------------
 def say(text):
     engine = pyttsx3.init()
     #rate=engine.getProperty('rate') #Default = 200
@@ -19,7 +19,7 @@ def say(text):
     engine.setProperty('voice', voices[0].id)# 0 for male & 1 for female.
     engine.say(text)
     engine.runAndWait()
-#---------------------------------------------------------------------------------------
+#-------------------------speech-recognition------------------------------------------
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -34,7 +34,7 @@ def takeCommand():
         except Exception as e:
             return "Sorry, didn't recognize your input."
 
-#---------------------------------------------------------------------------------------
+#------------------------------Gemini API-----------------------------------------------
 
 API_KEY = GEMINI_API_KEY
 
