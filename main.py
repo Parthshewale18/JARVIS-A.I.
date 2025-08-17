@@ -86,7 +86,7 @@ if __name__=="__main__":
                   say(f"openning {app[0]} sir...")
                   os.startfile(path)
       elif "play music" in query:
-          music_path="C:\\Users\\Admin\\Music\\music\\i_guess_krsna.mp3"
+          music_path="" #add our music path
           os.startfile(music_path)
           exit()
       elif "the time".lower() in query.lower():
@@ -103,3 +103,4 @@ if __name__=="__main__":
           os.system("shutdown /s /t 1")
       else:
           response=chat_with_gemini(query)
+
