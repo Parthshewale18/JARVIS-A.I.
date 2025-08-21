@@ -2,7 +2,7 @@ import streamlit as st
 import os, webbrowser, datetime
 import google.generativeai as genai
 import pyttsx3
-from env import GEMINI_API_KEY
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 
 # ------------------- Speech Output -------------------
 def say(text):
@@ -92,3 +92,4 @@ if prompt := st.chat_input("Type your message..."):
 
     # Optional: Voice output
     say(response)
+
